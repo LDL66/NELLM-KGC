@@ -1,1 +1,3 @@
-# NELLM-KGC
+# 基于NELLM的食品安全标准知识图谱补全方法
+## 针对食品安全标准知识分散、语义复杂等问题，引入知识图谱（Knowledge Graph，KG）技术能够有效提升食品安全监管体系的智能分析能力。然而，由于知识图谱固有的结构化表达和推理能力的局限，尤其在处理食品安全标准领域中长尾实体及其复杂多层次语义关系时，现有方法往往难以应对严密的逻辑约束，同时在处理“枢纽节点”（Hub Nodes）时容易引入大量噪声，极易淹没真正的长尾推理线索。为此，本文提出了基于邻域增强的大语言模型（Large Language Model，LLM）知识图谱补全框架（Neighborhood-Enhanced Large Language Model Knowledge Graph Completion，NELLM-KGC），旨在增强对食品安全标准领域复杂关联的推理能力。NELLM-KGC首先采用图结构化表示方式高效整合法规、标准限值、检测方法等关键异构数据，构建了中文食品安全标准知识图谱。其次，采用引导式方法将传统的知识图谱补全（Knowledge Graph Completion，KGC）任务转化为自然语言问答形式，并通过指令微调策略（Instruction-tuning）优化模型对中文食品标准领域任务的适应能力。为了提升推理的精确性，NELLM-KGC基于图剪枝算法设计了邻域信息融合机制，依托KG检索器与LLM的双阶段筛选，从实体邻域中精准捕获与推理路径强相关的Top−m证据链并进行精细化微调。我们在公共知识图谱数据集（如FB15k-237、WN18RR）和自定义的食品安全标准数据集上进行了广泛验证，实验结果表明，NELLM-KGC框架在三元组分类准确率、实体预测Hits@1和关系预测Hits@1等关键指标上均表现出较好的性能，证明了该框架的有效性。
+## "The code and dataset will be released upon acceptance of the paper." （代码和数据集将在论文录用后发布）。
